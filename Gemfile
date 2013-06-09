@@ -22,6 +22,7 @@ group :test, :development do
   gem 'factory_girl_rails'
   gem 'rspec-rails', '~> 2.0'
   gem 'rspec-kickstarter'
+
   group :sqlite do
     gem 'sqlite3', platforms: :ruby
     gem 'activerecord-jdbcsqlite3-adapter', platforms: :jruby
