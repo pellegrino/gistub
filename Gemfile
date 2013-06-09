@@ -4,12 +4,6 @@ gem 'rails', '3.2.14'
 gem 'jquery-rails', '2.2.1'
 gem 'rails_autolink'
 gem 'kramdown'
-
-group :sqlite do
-  gem 'sqlite3', :platforms => :ruby
-  gem 'activerecord-jdbcsqlite3-adapter', :platforms => :jruby
-end
-
 gem 'omniauth-openid', '1.0.1'
 gem 'erubis',  '~> 2.7.0'
 gem 'simple_form', '2.0.4'
@@ -28,6 +22,10 @@ group :test, :development do
   gem 'factory_girl_rails'
   gem 'rspec-rails', '~> 2.0'
   gem 'rspec-kickstarter'
+  group :sqlite do
+    gem 'sqlite3', platforms: :ruby
+    gem 'activerecord-jdbcsqlite3-adapter', platforms: :jruby
+  end
 end
 
 group :test do
@@ -50,6 +48,12 @@ group :server do
   gem 'thin', :platforms => :ruby
 end
 
+group :production do
+  group :mysql do
+    gem 'mysql2', platforms: :ruby
+    gem 'activerecord-jdbcmysql-adapter', platforms: :jruby
+  end
+end
 # rails g rspec:install
 # rails g simple_form:install --bootstrap
 # rails g bootstrap:install

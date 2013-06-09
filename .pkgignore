@@ -1,0 +1,7 @@
+Makefile
+*.md
+spec
+.git
+.gitignore
+.pkgignore
+*.tar.gz
