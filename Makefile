@@ -1,9 +1,9 @@
 build: app
 
-JRUBY_VERSION=1.7.3
+JRUBY_VERSION=1.7.4
 JRUBY_TARBALL=http://files.int.s-cloud.net/jruby/jruby-bin-$(JRUBY_VERSION).tar.gz
 JRUBY_DIR=vendor/jruby-$(JRUBY_VERSION)
-JRUBY=$(JRUBY_DIR)/bin/jruby -J-Xmx1024m
+JRUBY=$(JRUBY_DIR)/bin/jruby -J -Xmx4096m
 
 GEM=$(JRUBY) -S gem
 
